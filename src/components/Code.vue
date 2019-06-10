@@ -47,7 +47,7 @@ export default {
     methods: {
       handleSearch() {
           this.isLoading = true;
-          axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://fotobudkaraspberry.000webhostapp.com/getPhoto.php/?series_code=${this.term}`).then(response => {
+          axios.get(`https://fotobudkaraspberry.000webhostapp.com/getPhoto.php/?series_code=${this.term}`).then(response => {
               console.log('API call went okay');
               this.images = response.data;
               console.log('images',this.images);
